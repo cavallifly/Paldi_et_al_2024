@@ -23,3 +23,13 @@ bash ./scripts/explore_parameters.sh 1
 cd ..
 cd ..
 ```
+
+To test the increased stiffness with the 20-chains system, you can launch the following command from the <em>Simulations</em> folder:
+
+```bash
+cd Modelling_by_mechanism
+cd 05_ABcompartmentalization_increased_stiffness
+bash ./scripts/explore_parameters.sh 20
+cd ..
+cd ..
+```
