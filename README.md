@@ -1,1 +1,3 @@
-# Paldi_et_al_2024
+# Simulations
+
+To perform the simulations we used the TADphys package which you can download from XXX and install using the instuctions therein.
