@@ -1,3 +1,3 @@
 # Simulations
 
-To perform the simulations, we used the TADphys package, which you can download from XXX and install using the instructions therein.
+To perform the simulations, we used the TADphys package, which you can download from [here](https://github.com/cavallifly/TADphys) and install using the instructions therein.
