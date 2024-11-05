@@ -8,6 +8,7 @@ To prepare the simulations with 1 and 20 chains, you can launch the following co
 ```bash
 cd Modelling_setup
 bash ./scripts/Modelling_setup.sh
+cd ..
 ```
 <!---
 <div style="text-align: justify">
