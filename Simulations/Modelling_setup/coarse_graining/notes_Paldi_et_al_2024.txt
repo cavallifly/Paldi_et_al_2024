@@ -1,0 +1,3 @@
+Compute the parameters of the coarse-graining (CG) model applying the ‘yeast’ fine-scale model with
+nu=1kbp, sigma=20nm, and lk=100nm
+and imposing volumic densities of Φ=0.10 and DNA density of the mESC cells, ρ=0.006 bp/nm3.
