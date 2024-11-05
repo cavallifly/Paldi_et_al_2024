@@ -1,6 +1,9 @@
 # Paldi_et_al_2024
 
-This repository contains all the scripts for the work
+Scripts for the manuscript Paldi_et_al_2024
 
+Contributors
+
+The code is currently developed at the Cavalli Lab with the contributions of Marco Di Stefano.
 
 
