@@ -13,10 +13,7 @@ done
 nc=$1
 mainDir=05_ABcompartmentalization_increased_stiffness
 
-#for dir in $(ls -1 ./${mainDir}/mESC_phi_0.10_rosette | grep -v ":" | grep ${nc}_copies | grep "lkA_14.00_lkB_3.00"); #\|lkA_16.00_lkB_3.00\|lkA_1.00_lkB_0.00");
-for dir in $(ls -1 ./${mainDir}/mESC_phi_0.10_rosette | grep -v ":" | grep ${nc}_copies | grep "lkA_1.00_lkB_0.00");
-#for dir in $(ls -1 ./${mainDir}/mESC_phi_0.10_rosette | grep -v ":" | grep ${nc}_copies | grep "lkA_2.00_lkB_0.00");
-#for dir in $(ls -1 ./${mainDir}/mESC_phi_0.10_rosette | grep -v ":" | grep ${nc}_copies);
+for dir in $(ls -1 ./${mainDir}/mESC_phi_0.10_rosette | grep -v ":" | grep ${nc}_copies);
 do
     if [[ ! -d ./${mainDir}/mESC_phi_0.10_rosette/${dir} ]];
     then
