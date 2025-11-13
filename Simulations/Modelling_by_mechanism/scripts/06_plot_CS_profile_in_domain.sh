@@ -29,8 +29,7 @@ do
 
     rm -fvr ${outFileDist} ${outFileDistA} ${outFileDistB}
     
-    for dir in $(ls -1 | grep _${nc}_copies | grep -v tau); #| grep "lkA_18.00_lkB_3.00\|lkA_16.00_lkB_3.00\|lkA_14.00_lkB_3.00") ;
-    #for dir in $(ls -1 | grep _${nc}_copies) ; # | grep "EAA_0.080_EBB_0.000\|EAA_0.050_EBB_0.010") ;
+    for dir in $(ls -1 | grep _${nc}_copies | grep -v tau);
     do
 	echo $dir
 	if [[ ! -d ${dir} ]];
