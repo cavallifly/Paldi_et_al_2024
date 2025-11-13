@@ -1,6 +1,6 @@
 # Paldi_et_al_2024
 
-Scripts for the manuscript Paldi_et_al_2024
+This repository contains the scripts to perform the simulations in Paldi at al. Nature Genetics, 2025
 
 **Contributors**
 
