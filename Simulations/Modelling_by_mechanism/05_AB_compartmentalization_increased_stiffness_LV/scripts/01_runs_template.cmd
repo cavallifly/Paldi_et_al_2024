@@ -13,5 +13,5 @@ cd XXXdirXXX
 replica=XXXreplicaXXX
 condition=XXXconditionXXX
 
-mpirun -np 8 python ./01_runs_${condition}_replica_${replica}.py &> replica_XXXreplicaXXX.out
+python ./01_runs_${condition}_replica_${replica}.py &> replica_XXXreplicaXXX.out
 rm -fvr minimization_*.XYZ
