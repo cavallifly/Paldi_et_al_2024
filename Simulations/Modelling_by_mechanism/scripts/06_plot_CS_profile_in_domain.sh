@@ -71,7 +71,7 @@ do
 		cat _A_${t} | awk '{h[$1]+=$NF;h2[$1]+=$NF*$NF;c[$1]++}END{for(i in h){avg=h[i]/c[i]; avg2=h2[i]/c[i]; stddev=sqrt(avg2-avg*avg); print i,avg,stddev,c[i]}}' | sort -k 1,1n > _A
 		cat _B_${t} | awk '{h[$1]+=$NF;h2[$1]+=$NF*$NF;c[$1]++}END{for(i in h){avg=h[i]/c[i]; avg2=h2[i]/c[i]; stddev=sqrt(avg2-avg*avg); print i,avg,stddev,c[i]}}' | sort -k 1,1n > _B
 		
-		sed "s/XXXconditionXXX/${condition}/g" ../../../scripts/XX_plot_CS_profile_in_domain.gp	| gnuplot
+		sed "s/XXXconditionXXX/${condition}/g" ../../../scripts/06_plot_CS_profile_in_domain.gp	| gnuplot
 		mv data.ps ${outFile%.png}.ps
 		ps2pdf ${outFile%.png}.ps
 		rm ${outFile%.png}.ps
