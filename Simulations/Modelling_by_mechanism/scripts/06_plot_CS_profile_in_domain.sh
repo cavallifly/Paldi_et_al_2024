@@ -1,5 +1,3 @@
-#for dir in $(ls -1) ; do for t in 5400000 10800000 16200000 21600000 ; do rm -fr _{t} ; for file in $(ls -1 mESC_phi_0.10_rosette/EAA_${E}_EBB_0.000_EGG_0.000_6_copies/rc_150nm_res_10000bp*to_${t}_every_900000_replica_*_CS_perChrom.tab); do echo $file A $(awk '{if($1=="A"){print $3}}' ${file} | ~/howmuch.csh | awk '{print $5,$10,"+/-",$12}') >> _${t} ; echo $file B $(awk '{if($1=="B"){print $3}}' ${file} | ~/howmuch.csh | awk '{print $5,$10,"+/-",$12}') >> _${t} ; done ; echo $E $t A $(cat _${t} | grep -w A | awk '{print $4}' | ~/howmuch.csh ) ; echo $E $t B $(cat _${t} | grep -w B | awk '{print $4}' | ~/howmuch.csh ) ; done ; echo ; done
-
 mainDir=$(pwd)
 
 checkSymmetry=$(echo $mainDir | grep "05_AB\|06_AB" | wc -l | awk '{print $1}')
@@ -14,18 +12,12 @@ fi
 
 cd mESC_phi_0.10_rosette
 
-for condition in DMSO TSA TSA24hREC ;
+for condition in DMSO TSA ;
 do
     tag=HomoOverAll
 	    
-    inMicrocFileA=$(ls -1 /zssd/scratch/mdistefano/2023_10_22_Project_hyperacetylation/Modelling_by_mechanism/microC_CS_perChromosome/CS_${tag}_within_domains_rescaled_to_150_${condition}_*_A.txt)
-    inMicrocFileB=$(ls -1 /zssd/scratch/mdistefano/2023_10_22_Project_hyperacetylation/Modelling_by_mechanism/microC_CS_perChromosome/CS_${tag}_within_domains_rescaled_to_150_${condition}_*_B.txt)
-    #outFileDist=${mainDir}/mESC_phi_0.10_rosette/distances_to_CS_${tag}_within_domains_rescaled_to_150_${condition}_length_${smallerDom}_${largerDom}.txt
-    #outFileDistA=${mainDir}/mESC_phi_0.10_rosette/distances_to_CS_${tag}_within_domains_rescaled_to_150_${condition}_length_${smallerDom}_${largerDom}_A.txt
-    #outFileDistB=${mainDir}/mESC_phi_0.10_rosette/distances_to_CS_${tag}_within_domains_rescaled_to_150_${condition}_length_${smallerDom}_${largerDom}_B.txt	    
-    #outFileRankA=${mainDir}/mESC_phi_0.10_rosette/ranking_distances_to_CS_${tag}_within_domains_rescaled_to_150_A-${condition}_length_${smallerDom}_${largerDom}.txt
-    #outFileRankB=${mainDir}/mESC_phi_0.10_rosette/ranking_distances_to_CS_${tag}_within_domains_rescaled_to_150_B-${condition}_length_${smallerDom}_${largerDom}.txt
-    #outFileRank=${mainDir}/mESC_phi_0.10_rosette/ranking_distances_to_CS_${tag}_within_domains_rescaled_to_150_${condition}_length_${smallerDom}_${largerDom}.txt
+    inMicrocFileA=$(ls -1 ../../../microC_CS_perChromosome/CS_${tag}_within_domains_rescaled_to_150_${condition}_*_A.txt)
+    inMicrocFileB=$(ls -1 ../../../microC_CS_perChromosome/CS_${tag}_within_domains_rescaled_to_150_${condition}_*_B.txt)
     outFileDist=${mainDir}/mESC_phi_0.10_rosette/distances_to_CS_${tag}_within_domains_rescaled_to_150_${condition}_${nc}_copies.txt
     outFileDistA=${mainDir}/mESC_phi_0.10_rosette/distances_to_CS_${tag}_within_domains_rescaled_to_150_${condition}_A_${nc}_copies.txt
     outFileDistB=${mainDir}/mESC_phi_0.10_rosette/distances_to_CS_${tag}_within_domains_rescaled_to_150_${condition}_B_${nc}_copies.txt	    
