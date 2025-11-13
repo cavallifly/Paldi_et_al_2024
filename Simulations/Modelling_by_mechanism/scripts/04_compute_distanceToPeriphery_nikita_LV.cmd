@@ -21,7 +21,7 @@ lk=$(cat ${CGfile} | grep -w lkCG | awk '{print $10}')
 radius=$(cat ${CGfile} | grep -w radiusCG | awk '{print $16}')
 echo $b $lk $radius
 
-compartmentFile=/zssd/scratch/mdistefano/2023_10_22_Project_hyperacetylation/Modelling_setup/scripts/_compartments_${resolution}bp_${ncopies}_copies
+compartmentFile=../../Modelling_setup/scripts/_compartments_${resolution}bp_${ncopies}_copies
 nBins=10
 
 for phi in 0.10 ;
