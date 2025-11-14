@@ -1,0 +1,3 @@
+DMSO Median TR of 19 0.197919
+TSA Median TR of 19 0.404767
+TSA24hREC Median TR of 19 0.208954
