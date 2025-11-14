@@ -1,10 +1,10 @@
-inDir=../01_cool_files/balanced_text_matrices/
+inDir=./balanced_text_matrices/
 
 mapResolution=10000 # in bp
 
 condition=$1
 
-for file in $(ls -1 ${inDir}/full${condition}_*${mapResolution}bp* 2> /dev/null | grep -v TR);
+for file in $(ls -1 ${inDir}/*${condition}_*${mapResolution}bp* 2> /dev/null | grep -v TR);
 do
     echo $file
     head ${file}
