@@ -1,10 +1,9 @@
-inDir=../01_cool_files/observed_text_matrices/
+inDir=../01_cool_files/balanced_text_matrices/
 
 mapResolution=10000 # in bp
 
 condition=$1
 
-#for file in $(ls -1 ${inDir}/TSA_EFGHIwP*${mapResolution}bp*tab ${inDir}/TSA_24hREC_GHwP*${mapResolution}bp* ${inDir}/TSA_1hREC_GHwP*${mapResolution}bp* ${inDir}/full*${mapResolution}bp* | grep -v TR);
 for file in $(ls -1 ${inDir}/full${condition}_*${mapResolution}bp* 2> /dev/null | grep -v TR);
 do
     echo $file
@@ -44,7 +43,7 @@ do
 	outFile=${outFile%.tab}_perChrom.tab
 	
 	echo "#chrom cisChromContactsFraction transChromContactsFraction" | awk '{for(i=1;i<NF;i++){printf("%s\t",$i)}; printf("%s\n",$NF)}' > ${outFile}
-	for chrom in $(cat /home/Programs/chrom_sizes_mm10_higlass.txt | awk '{printf("%s ",$1)}')
+	for chrom in $(cat chrom_sizes_mm10_higlass.txt | awk '{printf("%s ",$1)}')
 	do
 	    echo $chrom
 	    
