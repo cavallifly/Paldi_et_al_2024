@@ -2,6 +2,8 @@
 outDir=balanced_text_matrices
 mkdir -p ${outDir} 
 
+# .mcool files must be downloaded from the GEO repository associated to this publication
+
 for resolution in 10000;
 do
    for coolFile in $(ls -1 full*.mcool );
